@@ -1,9 +1,6 @@
 package Calc;
 
 public class Calc {
-    private double firstNum;
-    private int secondNum;
-
     public void decision(String example) {
         try {
             String[] exampleArray = example.split(" ");
@@ -40,13 +37,13 @@ public class Calc {
     }
 
     public static double division(double firstNum, double secondNum) {
-        return firstNum / secondNum;
-    }
-
-    public static double multiplication(double firstNum, double secondNum) {
         if (secondNum == 0) {
             System.out.println("Ошибка! Деление на 0");
             return 0;
-        } else return firstNum * secondNum;
+        } else return firstNum / secondNum;
+    }
+
+    public static double multiplication(double firstNum, double secondNum) {
+        return firstNum * secondNum;
     }
 }
